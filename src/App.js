@@ -1,12 +1,15 @@
 import './App.css';
 import {MoviesList} from "./components/MoviesList/MoviesList";
+import Header from "./components/Header/Header";
 
 function App() {
+
     return (
+
         <div className="App">
 
-            <MoviesList/>
-
+                <Header/>
+                <MoviesList/>
         </div>
     );
 }
