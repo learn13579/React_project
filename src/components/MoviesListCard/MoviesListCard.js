@@ -1,35 +1,41 @@
 import './MoviesListCard.css';
+import {GenresIds, getGenres} from "../../services/genres.servise";
+import GenreBadge from "../GenreBadge/GenreBadge";
+import {useSelector} from "react-redux";
+import {useEffect, useState} from "react";
 
-export default function MoviesListCard({item}) {
+export default function MoviesListCard({item, genre_ids}) {
+
+    const [genres, setGenres] = useState([])
+
+    useEffect(() => {
+        getGenres().then(value => {
+            setGenres([...value.data.genres])
+        })
+    }, [])
+
+    // const genre = argument.id.join(',');
+
+    // const genresName = genres.filter(value => genresFilm.index0f(value.id) !== -1)
+
+    function xxx() {
+        for (const argument of genres) {
+            console.log(argument.id)
+        }
+    }
 
     return (
         <div className={'movie'}>
 
-            <p>Film ({item.id}):</p>
-
+            <img src={`https://image.tmdb.org/t/p/w500${item.poster_path}`} alt="foto"/>
             <h3>{item.original_title}</h3>
-            <img src={`https://image.tmdb.org/t/p/w500${item.poster_path}`} alt="foto" />
+            <p>Movie rating: {item.vote_average}</p>
 
-            <p>{item.popularity}</p>
-            <p>{item.genre_ids}</p>
-
+            <p>Popularity: {item.popularity}</p>
+            <p>GenresIds: {item.genre_ids}</p>
+            <button onClick={xxx}>ggg</button>
+            <br/>
+            <i>film {item.id}</i>
         </div>
     );
 }
-
-// <div className={'movie'}>
-//     <p>{item.backdrop_path}</p>
-//     <b>{item.id}. {item.original_title}</b>
-//     <p>{item.popularity}</p>
-// <a href={<MoviesPage/>}>in more detail</a>
-// </div>
-
-
-// import {useEffect, useState} from "react";
-// import {getMovies} from "../../services/movies.service";
-
-// let [movies, setMovies] = useState([]);
-// useEffect(() => {
-//     getMovies().then(value => setMovies([...value]))
-// }, [])
-

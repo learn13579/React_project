@@ -22,10 +22,27 @@
     height: 40px;
 }
 
-.light{
-    background: blanchedalmond;
+.headerMoviesList > form{
+  margin-top: 50px;
+    margin-left: 200px;
 }
 
-.dark{
+.headerMoviesList > form> input{
+    width: 400px;
+    height: 20px;
+}
+
+
+.toggle > button {
+    justify-content: left;
+    background: white;
+    padding: 5px;
+}
+
+.light {
+    background: rgba(255, 235, 205, 0.24);
+}
+
+.dark {
     background: dimgray;
 }

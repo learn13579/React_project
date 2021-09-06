@@ -11,13 +11,17 @@ export function MoviesList() {
         getMovie().then(value => setMovie([...value.data.results]));
     }, [])
 
-    console.log(movie);
+    console.log(movie.genre_ids);
+
+console.log(movie)
 
     return (
         <div>
+
+
             <div className={'movies'}>
                 {
-                    movie.map(value => <MoviesListCard item={value} key={value.id}/>)
+                    movie.map(value => <MoviesListCard item={value} key={value.id} genre_ids={value.genre_ids}/>)
                 }
             </div>
         </div>

@@ -7,7 +7,7 @@ const instance = axios.create({
     }
 })
 
-const getMovie = async () => await instance.get('/discover/movie');
+const getMovie = async (page) => await instance.get(`/discover/movie?page=${page}`);
 
 // const getMovie = (id) =>{
 //     return instance.get('/discover/movie/' + id);
