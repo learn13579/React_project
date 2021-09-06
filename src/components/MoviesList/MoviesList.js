@@ -1,24 +1,23 @@
 import {useEffect, useState} from "react";
-import {getMovies} from "../../services/movies.service";
+import {getMovie} from "../../services/movies.service";
 import MoviesListCard from "../MoviesListCard/MoviesListCard";
 import './MoviesList.css';
 
 export function MoviesList() {
 
-    let [movies, setMovies] = useState([]);
+    let [movie, setMovie] = useState([]);
 
     useEffect(() => {
-        getMovies().then(value => setMovies([value.data.results]));
+        getMovie().then(value => setMovie([...value.data.results]));
     }, [])
 
-    console.log(movies);
-    console.log(movies.id)
+    console.log(movie);
 
     return (
         <div>
             <div className={'movies'}>
                 {
-                    movies.map(value => <MoviesListCard item={value} key={value.id}/>)
+                    movie.map(value => <MoviesListCard item={value} key={value.id}/>)
                 }
             </div>
         </div>

@@ -1,6 +1,5 @@
 .headerMoviesList {
     display: flex;
-    border: 2px solid darksalmon;
 }
 
 .headerMoviesList > img {

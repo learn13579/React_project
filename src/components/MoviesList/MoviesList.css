@@ -1,5 +1,6 @@
 .movies {
-    border: 2px solid greenyellow;
     width: 100%;
+    display: flex;
+    flex-wrap: wrap;
 }
 

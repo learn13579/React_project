@@ -7,10 +7,10 @@ const instance = axios.create({
     }
 })
 
-const getMovies = async () => await instance.get('/discover/movie');
+const getMovie = async () => await instance.get('/discover/movie');
 
-const getMovie = (id) =>{
-    return instance.get('/discover/movie/' + id);
-};
+// const getMovie = (id) =>{
+//     return instance.get('/discover/movie/' + id);
+// };
 
-export {getMovies, getMovie}
+export {getMovie}

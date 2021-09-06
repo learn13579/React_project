@@ -5,7 +5,13 @@ export default function MoviesListCard({item}) {
     return (
         <div className={'movie'}>
 
-            <b>{item.id}</b>
+            <p>Film ({item.id}):</p>
+
+            <h3>{item.original_title}</h3>
+            <img src={`https://image.tmdb.org/t/p/w500${item.poster_path}`} alt="foto" />
+
+            <p>{item.popularity}</p>
+            <p>{item.genre_ids}</p>
 
         </div>
     );
