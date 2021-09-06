@@ -10,8 +10,8 @@ export default function Header(){
         <div className={toggle}>
             <div className={"headerMoviesList"}>
                 <img src={img} alt="logo"/>
-                <input/>
-                <button>search movies</button>
+                <input  placeholder="search movie" type="text"/>
+                <button>go</button>
 
                 <button onClick={()=>{
                     if (toggle === 'dark'){
