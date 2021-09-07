@@ -1,19 +1,30 @@
 import './Header.css';
+
 import {useState} from "react";
 import img from "./Logo.png";
 import img2 from "./avagirls.png";
 
 export default function Header(){
 
-    let [toggle, setToggle] = useState('light');
+    const [seargTerm, setseargTerm] = useState('');
+
+    let [toggle, setToggle] = useState('AppLight');
+
+    let onSubmit = (e)=>{
+        e.preventDefault();
+    }
+
+  const  handleOnChange= (e)=>{
+      setseargTerm(e.target.value);
+  }
 
     return (
         <div className={toggle}>
             <button className={"butToggle"} onClick={()=>{
-                if (toggle === 'dark'){
-                    setToggle('light');
-                } else if (toggle === 'light'){
-                    setToggle('dark');
+                if (toggle === 'AppDark'){
+                    setToggle('AppLight');
+                } else if (toggle === 'AppLight'){
+                    setToggle('AppDark');
                 }
             }}>change background</button>
 
@@ -21,7 +32,7 @@ export default function Header(){
                 <img src={img} alt="logo"/>
 
                 <form>
-                <input  placeholder="search movie" type="text" className="form__field" />
+                <input onSubmit={onSubmit} placeholder="search movie" type="search" value={seargTerm} onChange={handleOnChange} className="form__field" />
                 <button className={"butToggle"}>go</button>
                 </form>
 
@@ -30,8 +41,6 @@ export default function Header(){
                     <h6>user 125</h6>
                 </div>
             </div>
-
-
 
         </div>
     );

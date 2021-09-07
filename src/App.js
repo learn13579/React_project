@@ -9,12 +9,23 @@ import {
     withRouter
 } from "react-router-dom";
 import MoviesPage from "./components/MoviesPage /MoviesPage";
+import {useState} from "react";
 
 function App() {
+    let [toggle, setToggle] = useState('AppLight');
 
     return (
         <Router>
-            <div className="App">
+
+            <div className="AppLight">
+
+                <button className={"butToggle"} onClick={()=>{
+                    if (toggle === 'AppDark'){
+                        setToggle('AppLight');
+                    } else if (toggle === 'AppLight'){
+                        setToggle('AppDark');
+                    }
+                }}>change background (app) </button>
 
                 <Header/>
 

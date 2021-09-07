@@ -4,7 +4,7 @@
 
 .headerMoviesList > img {
     margin: 20px 20px 20px 20px;
-    width: 400px;
+    width: 300px;
 }
 
 .headerMoviesList > input {
@@ -12,16 +12,6 @@
     width: 300px;
     height: 20px;
 }
-
-/*.headerMoviesList > button {*/
-/*    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);*/
-/*    margin: 50px 20px 100px 100px;*/
-/*    background: white;*/
-/*    color: black;*/
-/*    border-radius: 5%;*/
-/*    padding: 5px;*/
-/*    height: 40px;*/
-/*}*/
 
 .headerMoviesList > form{
   margin-top: 50px;

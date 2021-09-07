@@ -1,10 +1,11 @@
-.App{
+.AppLight{
   text-align: center;
-  /*background-image: url("");*/
+  background: linear-gradient(to right, whitesmoke , antiquewhite);
 }
 
 .AppDark{
   text-align: center;
+  background: radial-gradient(lavender, dimgray, black);
 }
 
 .App-logo {
@@ -40,5 +41,18 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.butToggle {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  justify-content: left;
+  background-color: white;
+  padding: 5px;
+  border: none;
+  color: darkslategray;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
 }
 
