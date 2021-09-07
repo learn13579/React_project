@@ -1,7 +1,7 @@
 import "./GenreBadge.css"
-// import {getGenres} from "../../services/genres.servise";
 import {Link} from "react-router-dom";
 import {useSelector} from "react-redux";
+// import {getGenres} from "../../services/genres.servise";
 // import {useEffect, useState} from "react";
 
 export function GenresIds({genre_ids}) {
@@ -13,20 +13,12 @@ export function GenresIds({genre_ids}) {
     const genresName = genres.filter(value => genresFilm.indexOf(value.id) !== -1)
 
     // const [genres, setGenres] = useState([])
-    //
+
     // useEffect(() => {
     //     getGenres().then(value => {
     //         setGenres([...value.data.genres])
     //     })
     // }, [])
-
-    // function xxx() {
-    //     for (const argument of genres) {
-    //         console.log(argument.id)
-    //     }
-    // }
-
-
 
     return (
         <div>
