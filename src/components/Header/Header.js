@@ -1,6 +1,7 @@
 import './Header.css';
 import {useState} from "react";
 import img from "./Logo.png";
+import img2 from "./avagirls.png";
 
 export default function Header(){
 
@@ -24,7 +25,13 @@ export default function Header(){
                 <button className={"butToggle"}>go</button>
                 </form>
 
+                <div className={'avaUser'}>
+                    <img className={'ava'} src={img2} alt="logo"/>
+                    <h6>user 125</h6>
+                </div>
             </div>
+
+
 
         </div>
     );
