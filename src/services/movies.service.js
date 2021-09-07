@@ -14,3 +14,4 @@ const getMovie = async (page) => await instance.get(`/discover/movie?page=${page
 // };
 
 export {getMovie}
+// `/discover/movie?pageNumber=${page}`

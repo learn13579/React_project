@@ -8,7 +8,7 @@ export default function Header(){
 
     return (
         <div className={toggle}>
-            <button onClick={()=>{
+            <button className={"butToggle"} onClick={()=>{
                 if (toggle === 'dark'){
                     setToggle('light');
                 } else if (toggle === 'light'){
@@ -16,13 +16,12 @@ export default function Header(){
                 }
             }}>change background</button>
 
-
             <div className={"headerMoviesList"}>
                 <img src={img} alt="logo"/>
 
                 <form>
-                <input  placeholder="search movie" type="text"/>
-                <button>go</button>
+                <input  placeholder="search movie" type="text" className="form__field" />
+                <button className={"butToggle"}>go</button>
                 </form>
 
             </div>

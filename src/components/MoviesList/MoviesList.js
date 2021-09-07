@@ -18,7 +18,6 @@ console.log(movie)
     return (
         <div>
 
-
             <div className={'movies'}>
                 {
                     movie.map(value => <MoviesListCard item={value} key={value.id} genre_ids={value.genre_ids}/>)

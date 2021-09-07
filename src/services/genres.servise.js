@@ -10,6 +10,3 @@ const instance = axios.create({
 const getGenres = async () => await instance.get('/genre/movie/list');
 
 export {getGenres}
-
-
-
