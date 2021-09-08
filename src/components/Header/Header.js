@@ -33,9 +33,9 @@ export default function Header() {
                 <img src={img} alt="logo"/>
 
                 <form>
-                    <input onSubmit={onSubmit} placeholder="search movie" type="search" value={searchTerm}
+                    <input onSubmit={onSubmit} placeholder="write the title of the movie" type="search" value={searchTerm}
                            onChange={handleOnChange} className="form__field"/>
-                    <button className={"button"}>go</button>
+                    <button className={"button"}>search</button>
                 </form>
 
                 <div className={'avaUser'}>
