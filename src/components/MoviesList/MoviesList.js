@@ -4,7 +4,7 @@ import {getMovies} from "../../services/movies.service";
 import MoviesListCard from "../MoviesListCard/MoviesListCard";
 
 export function MoviesList(props) {
-    let {match:  history} = props;
+    let {match: history} = props;
     let [movies, setMovies] = useState([]);
     let [page, setPage] = useState(1);
 
@@ -15,7 +15,7 @@ export function MoviesList(props) {
     console.log(movies)
 
     const nextPage = () => {
-        setPage(page+1);
+        setPage(page + 1);
     }
 
     return (
@@ -24,8 +24,7 @@ export function MoviesList(props) {
             <div className={'movies'}>
                 {
                     movies.length > 0 && movies.map(value => <MoviesListCard item={value} history={history}
-                                                                             key={value.id}{...value}
-                                                                             genre_ids={value.genre_ids}/>)
+                                                                             key={value.id}{...value}/>)
                 }
             </div>
 

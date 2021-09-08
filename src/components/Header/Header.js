@@ -4,36 +4,38 @@ import {useState} from "react";
 import img from "./Logo.png";
 import img2 from "./avagirls.png";
 
-export default function Header(){
+export default function Header() {
 
     const [searchTerm, setSearchTerm] = useState('');
 
     let [toggle, setToggle] = useState('AppLight');
 
-    let onSubmit = (e)=>{
+    let onSubmit = (e) => {
         e.preventDefault();
     }
 
-  const  handleOnChange= (e)=>{
-      setSearchTerm(e.target.value);
-  }
+    const handleOnChange = (e) => {
+        setSearchTerm(e.target.value);
+    }
 
     return (
         <div className={toggle}>
-            <button className={"butToggle"} onClick={()=>{
-                if (toggle === 'AppDark'){
+            <button className={"butToggle"} onClick={() => {
+                if (toggle === 'AppDark') {
                     setToggle('AppLight');
-                } else if (toggle === 'AppLight'){
+                } else if (toggle === 'AppLight') {
                     setToggle('AppDark');
                 }
-            }}>change background</button>
+            }}>change background
+            </button>
 
             <div className={"headerMoviesList"}>
                 <img src={img} alt="logo"/>
 
                 <form>
-                <input onSubmit={onSubmit} placeholder="search movie" type="search" value={searchTerm} onChange={handleOnChange} className="form__field" />
-                <button className={"button"}>go</button>
+                    <input onSubmit={onSubmit} placeholder="search movie" type="search" value={searchTerm}
+                           onChange={handleOnChange} className="form__field"/>
+                    <button className={"button"}>go</button>
                 </form>
 
                 <div className={'avaUser'}>
