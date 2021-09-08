@@ -9,22 +9,19 @@
 
 .headerMoviesList > input {
     margin: 20px 20px 20px 200px;;
-    width: 300px;
-    height: 20px;
 }
 
-.headerMoviesList > form{
-  margin-top: 50px;
-    margin-left: 200px;
+.headerMoviesList > form {
+    margin-top: 50px;
+    margin-left: 150px;
 }
 
-.headerMoviesList > form> input{
-    width: 400px;
-    height: 20px;
+.headerMoviesList > form > input {
+    width: 320px;
 }
 
 .butToggle {
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 antiquewhite;
     justify-content: left;
     background-color: white;
     padding: 5px;
@@ -36,8 +33,20 @@
     font-size: 16px;
 }
 
+.button {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background-color: white;
+    padding: 5px;
+    width: 30px;
+    border: none;
+    color: darkslategray;
+    text-align: center;
+    display: inline-block;
+    font-size: 16px;
+}
+
 .light {
-    background: linear-gradient(to right, whitesmoke , antiquewhite);
+    background: linear-gradient(to right, whitesmoke, antiquewhite);
 }
 
 .dark {
@@ -47,22 +56,23 @@
 .form__field {
     width: 100%;
     border: 0;
-    border-bottom: 2px solid  gray;
+    border-bottom: 2px solid gray;
     outline: 0;
     font-size: 1.3rem;
-    color:  black;
+    color: black;
     padding: 7px 0;
     background: transparent;
     transition: border-color 0.2s;
 }
 
-.ava{
+.ava {
     width: 60px;
     height: 60px;
     border-radius: 50%;
     border: 1px solid black;
 }
 
-.avaUser{
-   margin-left: 120px;
+.avaUser {
+    margin-top: 1%;
+    margin-left: 20%;
 }

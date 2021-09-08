@@ -1,8 +1,19 @@
 .link{
-    color: black;
-    background: white;
-    border-radius: 20px;
-    border: 1px solid black;
-    padding: 4px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    border: 5px outset rgba(147, 144, 144, 0.25);
+    justify-content: left;
+    background-color: white;
+    padding: 5px;
+    text-align: center;
     text-decoration: none;
+    display: inline-block;
+    font-size: 18px;
+    width: 50%;
+    margin: 5%;
+}
+
+.page_movie{
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    border: 5px outset rgba(147, 144, 144, 0.25);
+    margin: 5%;
 }

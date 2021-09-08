@@ -6,7 +6,7 @@ import img2 from "./avagirls.png";
 
 export default function Header(){
 
-    const [seargTerm, setseargTerm] = useState('');
+    const [searchTerm, setSearchTerm] = useState('');
 
     let [toggle, setToggle] = useState('AppLight');
 
@@ -15,7 +15,7 @@ export default function Header(){
     }
 
   const  handleOnChange= (e)=>{
-      setseargTerm(e.target.value);
+      setSearchTerm(e.target.value);
   }
 
     return (
@@ -32,8 +32,8 @@ export default function Header(){
                 <img src={img} alt="logo"/>
 
                 <form>
-                <input onSubmit={onSubmit} placeholder="search movie" type="search" value={seargTerm} onChange={handleOnChange} className="form__field" />
-                <button className={"butToggle"}>go</button>
+                <input onSubmit={onSubmit} placeholder="search movie" type="search" value={searchTerm} onChange={handleOnChange} className="form__field" />
+                <button className={"button"}>go</button>
                 </form>
 
                 <div className={'avaUser'}>

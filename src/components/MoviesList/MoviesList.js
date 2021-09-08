@@ -1,34 +1,35 @@
+import './MoviesList.css';
 import {useEffect, useState} from "react";
 import {getMovies} from "../../services/movies.service";
 import MoviesListCard from "../MoviesListCard/MoviesListCard";
-import './MoviesList.css';
-import {Route, Switch} from "react-router-dom";
-import MoviesPage from "../MoviesPage /MoviesPage";
 
 export function MoviesList(props) {
-    let {match: {url}, history} = props;
+    let {match:  history} = props;
     let [movies, setMovies] = useState([]);
+    let [page, setPage] = useState(1);
 
     useEffect(() => {
-        getMovies().then(value => setMovies([...value.data.results]));
-    }, [])
+        getMovies(page).then(value => setMovies([...value.data.results]));
+    }, [page])
 
     console.log(movies)
 
+    const nextPage = () => {
+        setPage(page+1);
+    }
+
     return (
-        <div>
+        <div className={'moviesDiv'}>
 
             <div className={'movies'}>
                 {
-                    movies.length>0 &&  movies.map(value => <MoviesListCard item={value} history={history} key={value.id} genre_ids={value.genre_ids}/>)
+                    movies.length > 0 && movies.map(value => <MoviesListCard item={value} history={history}
+                                                                             key={value.id}{...value}
+                                                                             genre_ids={value.genre_ids}/>)
                 }
             </div>
 
-            <Switch>
-            <div>
-                <Route path={`${url}/:id`} component={MoviesPage}/>
-            </div>
-            </Switch>
+            <button onClick={nextPage} className={'nextPage'}>next page...</button>
         </div>
     );
 }

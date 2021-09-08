@@ -2,5 +2,23 @@
     width: 100%;
     display: flex;
     flex-wrap: wrap;
-    background: radial-gradient(whitesmoke, aliceblue, lavender, dimgray);
 }
+
+.nextPage{
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    border: 5px outset rgba(147, 144, 144, 0.25);
+    justify-content: left;
+    background-color: white;
+    padding: 5px;
+    text-shadow: 1px 1px 2px #000000, 0 0 1em #8c8181;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 18px;
+    width: 90%;
+    margin: 2%;
+}
+
+/*.moviesDiv{*/
+/*    background: radial-gradient(whitesmoke, aliceblue, lavender, dimgray);*/
+/*}*/

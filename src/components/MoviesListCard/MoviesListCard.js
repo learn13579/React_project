@@ -12,7 +12,6 @@ function MoviesListCard({item, genre_ids}) {
 
             <p>Movie rating: <b className={"rating"}>{item.vote_average}</b> <img className={'star'} src={img} alt="star"/> </p>
 
-            <p>Popularity: {item.popularity}</p>
             <p>GenresIds: {item.genre_ids}</p>
 
             <Link className={'link'} to={{pathname:`/moviesPage/${item.id}`, state:item}}>movies details</Link>
