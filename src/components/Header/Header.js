@@ -3,6 +3,8 @@ import './Header.css';
 import {useState} from "react";
 import img from "./Logo.png";
 import img2 from "./avagirls.png";
+import {getMovies} from "../../services/movies.service";
+import {BASE_URL, SEARCH_URL} from "../../services/const";
 
 export default function Header() {
 
@@ -16,6 +18,14 @@ export default function Header() {
 
     const handleOnChange = (e) => {
         setSearchTerm(e.target.value);
+
+        if (searchTerm) {
+            getMovies(SEARCH_URL + searchTerm)
+        } else {
+            getMovies(BASE_URL + '/moviesPage/:id')
+        }
+
+        setSearchTerm('');
     }
 
     return (
@@ -32,9 +42,12 @@ export default function Header() {
             <div className={"headerMoviesList"}>
                 <img src={img} alt="logo"/>
 
-                <form>
-                    <input onSubmit={onSubmit} placeholder="write the title of the movie" type="search" value={searchTerm}
-                           onChange={handleOnChange} className="form__field"/>
+                <form onSubmit={onSubmit}>
+                    <input placeholder="write the title of the movie"
+                           type="search"
+                           value={searchTerm}
+                           onChange={handleOnChange}
+                           className="form__field"/>
                     <button className={"button"}>search</button>
                 </form>
 

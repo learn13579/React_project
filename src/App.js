@@ -1,6 +1,4 @@
 import './App.css';
-import {MoviesList} from "./components/MoviesList/MoviesList";
-import Header from "./components/Header/Header";
 import {
     BrowserRouter as Router,
     Switch,
@@ -8,8 +6,11 @@ import {
     Link,
     withRouter
 } from "react-router-dom";
+
+import Header from "./components/Header/Header";
+import {MoviesList} from "./components/MoviesList/MoviesList";
 import MoviesPage from "./components/MoviesPage /MoviesPage";
-import {useState} from "react";
+// import {useState} from "react";
 
 function App() {
 
@@ -34,7 +35,6 @@ function App() {
                     <Switch>
                         <Route path={'/moviesPage/:id'} component={MoviesPage}/>
                         <Route path={'/'} component={MoviesList}/>
-
                     </Switch>
                 </div>
 
